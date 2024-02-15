@@ -1,6 +1,5 @@
 import React from "react";
-const Header = () => {
+
+export const Favorite = () => {
   return <div>Header</div>;
 };
-
-export default Header;
