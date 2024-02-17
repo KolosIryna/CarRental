@@ -1,6 +1,6 @@
 import React from "react";
 
-export const Modal = () => {
+const Modal = () => {
   return (
     <div>
       <div>
@@ -13,3 +13,5 @@ export const Modal = () => {
     </div>
   );
 };
+
+export default Modal;

@@ -1,21 +1,20 @@
-// import { Route, Routes } from "react-router-dom";
-import "./App.css";
-import { Home } from "./pages/Home/Home";
-import { Catalog } from "./pages/Catalog/Catalog";
-import { Favorite } from "./pages/Favorites/Favorites";
+import { Navigate, Route, Routes } from "react-router-dom";
+import Layout from "./components/Layout/Layout";
+
+import HomePage from "./pages/HomePage/HomePage";
+import CatalogPage from "./pages/CatalogPage/CatalogPage";
+import FavoritePage from "./pages/FavoritesPage/FavoritesPage";
 
 export const App = () => {
   return (
-    // <Routes>
-    //   <Route index element={<Home />}></Route>
-    //   <Route path="catalog" element={<Catalog />}></Route>
-    //   <Route path="favorites" element={<Favorite />}></Route>
-    // </Routes>
-    <div>
-      <Home />
-      <Catalog />
-      <Favorite />
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/catalog" element={<CatalogPage />} />
+        <Route path="/favorites" element={<FavoritePage />} />
+        <Route path="*" element={<Navigate to="/" />} />
+      </Routes>
+    </Layout>
   );
 };
 

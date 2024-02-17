@@ -1,22 +1,28 @@
 import React from "react";
+import { StyledFormFilter } from "./StyledFormFilter.styled";
 
-export const FormFilter = () => {
+const FormFilter = () => {
   return (
-    <form action="">
-      <label htmlFor="">
-        <input type="text" />
+    <StyledFormFilter action="">
+      <label htmlFor="" className="label">
+        Car brand
+        <input type="text" placeholder="Enter the text" />
       </label>
 
-      <label htmlFor="">
-        <input type="text" />
+      <label htmlFor="" className="label">
+        Price/ 1 hour
+        <input type="text" placeholder="To" />
       </label>
 
-      <label htmlFor="">
-        <input type="text" />
-        <input type="text" />
+      <label htmlFor="" className="label">
+        Сar mileage / km
+        <input type="text" placeholder="From " />
+        <input type="text" placeholder="To" />
       </label>
 
-      <button type="submit">Submit</button>
-    </form>
+      <button type="submit">Search</button>
+    </StyledFormFilter>
   );
 };
+
+export default FormFilter;

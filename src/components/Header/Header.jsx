@@ -1,23 +1,31 @@
 import React from "react";
-// import { NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
-import { HeaderStyled } from "./StyledHeader.styled";
+import { StyledHeader } from "./StyledHeader.styled";
 import Car from "../../image/car.png";
 
-export const Header = () => {
+const Header = () => {
   return (
-    <HeaderStyled>
-      <img src={Car} alt="Car" width="40px" />
-      <nav>
-        {/* <NavLink to="/catalog" className="header_link">
-          Catalog
+    <StyledHeader>
+      <div className="header">
+        <NavLink to="/" className="logo">
+          <img src={Car} alt="Car" width="60px" height="60px" />
+          <p>Car Rental</p>
         </NavLink>
-        <NavLink to="/favorite" className="header_link">
-          Favorite
-        </NavLink> */}
-        <a href="/catalog">Catalog</a>
-        <a href="/favorite">Favorite</a>
-      </nav>
-    </HeaderStyled>
+        <nav className="nav">
+          <NavLink to="/" className="header_link">
+            Home
+          </NavLink>
+          <NavLink to="/catalog" className="header_link">
+            Catalog
+          </NavLink>
+          <NavLink to="/favorites" className="header_link">
+            Favorites
+          </NavLink>
+        </nav>
+      </div>
+    </StyledHeader>
   );
 };
+
+export default Header;

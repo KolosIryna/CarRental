@@ -1,16 +1,21 @@
 import React from "react";
-import { ButtonLoadMore } from "../ButtonLoadMore/StyledButton.styled";
 
-export const ListCar = () => {
+const ListCar = () => {
   return (
     <div>
       <ul>
         <li>
           <img src="" alt="" />
-          <p></p>
+          <p>ggggg</p>
+        </li>
+        <li>
+          <img src="" alt="" />
+          <p>ggggg</p>
         </li>
       </ul>
-      <ButtonLoadMore />
+      {/* <ButtonLoadMore /> */}
     </div>
   );
 };
+
+export default ListCar;
